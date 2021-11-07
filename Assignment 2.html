@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment 2</title>
+</head>
+<script>
+    function data() {
+        var name1 = prompt("Enter a Sentence(any English sentence)");
+        var name2 = prompt("Enter a letter");
+        console.log(name1);
+        console.log(name2);
+        for (i = 0; i < name1.length; i++) {
+            if (name2 == name1[i]) {
+                let pos1 = name1.indexOf(name1[i]);
+                var final = name1.slice(pos1 + 1, name1.length)
+                document.write(`The required output "${final}"`)
+                break;
+            }
+
+        }
+        var no_name = name1.includes(name2);
+
+        if (no_name == false) {
+            document.write(`The entered letter not found`)
+        }
+    }
+    data()
+</script>
+
+</html>
